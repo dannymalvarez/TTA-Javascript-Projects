@@ -7,3 +7,10 @@ function concat() { //defining my function to concatenate
     sentence += " a lot from this book!"; // adding a second string to the sentence variable
     document.getElementById("Concatenate").innerHTML = sentence; //putting the result "sentence" into the html by the concatenate id
 }
+
+function multiply() {
+    var B = 4;
+    var A = 3;
+    product = A * B;
+    document.getElementById("Multiply").innerHTML = product;
+}
