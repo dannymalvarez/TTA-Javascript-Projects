@@ -28,3 +28,7 @@ function My_First_Function() { // Defining a function and naming it
 var C = "This is the first string that ";
 var D = "gets concatenated to the second string.";
 document.write(C + D);
+
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
