@@ -71,3 +71,4 @@ function not_not_Function() { //defining a function to display the opposite/inve
 }
 
 
+document.write(Bigger = (5 > 1) ? "Left number is bigger":"Right number is bigger");
