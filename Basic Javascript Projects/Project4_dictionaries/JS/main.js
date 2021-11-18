@@ -9,3 +9,4 @@ function my_Dictionary() { // defining a function for a dictionary
     document.getElementById("Dictionary").innerHTML = Truck.Model; //this prints out the specified value to the html
 
 }
+
