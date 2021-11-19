@@ -29,3 +29,25 @@ let area = how.search("today");
 
 document.getElementById("search").innerHTML = area;
 }
+
+function string_Method() {
+    var G = 184;
+    document.getElementById("Numbers_to_string").innerHTML = G.toString();
+}
+
+function precision_Method() {
+    var F = 123.1232230498203948345;
+    document.getElementById("Precision").innerHTML = F.toPrecision(5);
+}
+
+function fixed() {
+    let five = 5.987987987;
+    let fiveg = five.toFixed(3);
+document.getElementById("5g").innerHTML = fiveg;
+}
+
+function fixedThis() {
+    let five = "value of";
+    let fiveg = five.valueOf(five);
+document.getElementById("fixThis").innerHTML = fiveg;
+}
