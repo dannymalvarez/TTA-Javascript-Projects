@@ -11,7 +11,7 @@ multiply_num(); //calling function
 multiply_num2(); //calling function
 
 
-/* ****** This is commented out because it for some reason wasn't letting my if (5 > 1) statement work ******
+/* ****** This is commented out because it for some reason wasn't letting my if (5 > 1) statement work ****** */
 
 function multiply_num3() { //defining a function to multiply numbers
     var Y = 5; //decided to use Y instead of X so it wouldn't pull in the global "X"
@@ -19,11 +19,12 @@ function multiply_num3() { //defining a function to multiply numbers
 }
 
 function multiply_num4() { //defining a function to multiply numbers
+    var Y = 23;
     console.log(10 * Y); // logging output to console
 }
 
 multiply_num3();
-multiply_num4(); */
+multiply_num4(); 
 
 function get_Date() { //defining function for getting the time and spitting out a result based on that info
     if (new Date().getHours() < 18) { // defining if statement that checks if time is earlier than 6 pm 
