@@ -1,0 +1,7 @@
+input {
+    width: 15%;
+    border: 2px double blue;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    background-color: lightgray;
+}
