@@ -14,16 +14,16 @@ function placeXOrO(squareNumber) {
         // This condition checks who's turn it is.
         if (activePlayer === 'X') {
             // If activePlayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("Images/x.png")';
+            select.style.backgroundImage = 'url("Images/x2.png")';
             // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             // If activePlayer is equal to 'O', the o.png is placed in HTML.
-            select.style.backgroundImage = 'url("Images/o.png")';
+            select.style.backgroundImage = 'url("Images/o2.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
         // This calls a function to check for any win conditions.
-        checkWinConditions() 
+        checkWinConditions();
         // This condition is for changing the active player.
         if (activePlayer === 'X') {
             // If active player is 'X' change it to 'O'
@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
         }
 
         // This function plays placement sound.
-        audio('./media/place.mp3') 
+        audio('./media/place2.mp3');
         // This condition checks to see if it is computers turn.
         if(activePlayer === 'O') {
             // This function disables clicking for computer choice.
@@ -69,9 +69,10 @@ function placeXOrO(squareNumber) {
 }
 }
 
+
 // This function parses the selectedSquares array to search for win conditions.
 // drawWinLine function is called to draw line if condition is met.
-function checkWinConditions() {
+function checkWinConditions() { /** This function draws the lines when there is a win */
 // X 0, 1, 2 condition.
 if  (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
 // X 3, 4, 5 condition.
@@ -82,10 +83,14 @@ else if  (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
 else if  (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 558) }
 // X 2, 5, 8 condition.
 else if  (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
+// X 0, 3, 6 condition.
+else if  (arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 550, 100, 50) }
 // X 6, 4, 2 condition.
 else if  (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100, 508, 510, 90) }
 // X 0, 4, 8 condition.
 else if  (arrayIncludes('0X', '4X', '8X')) { drawWinLine(100, 100, 520, 520) }
+// O 0, 3, 6 condition.
+else if  (arrayIncludes('0O', '3O', '6O')) { drawWinLine(100, 550, 100, 50) }
 // O 0, 1, 2 condition.
 else if  (arrayIncludes('0O', '1O', '2O')) { drawWinLine(50, 100, 558, 100) }
 // O 3, 4, 5 condition.
@@ -104,7 +109,7 @@ else if  (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
 // squares are selected the code executes.
 else if (selectedSquares.length >= 9) {
     // This function plays the tie game sound.
-    audio('./media/tie.mp3');
+    audio('./media/tie2.mp3');
     // This function sets a .3 second timer before the resetGame is called.
     setTimeout(function () { resetGame(); }, 1000);
 }
@@ -132,7 +137,7 @@ function disableClick() {
     setTimeout(function() {body.style.pointerEvents = 'auto';},1000);
 }
 
-// This function takes a string parameter of the path yous earlier for 
+// This function takes a string parameter of the path you earlier for 
 // placement sound ('.media/place.mp3')
 function audio(audioURL) {
     // We create a new audio object and we pass the path as a parameter
@@ -192,7 +197,7 @@ function animateLineDrawing() {
     // This is necessary for the 6, 4, 2 win condition
     if (x1 <= x2 && y1 >= y2) {
         if (x < x2) { x += 10; }
-        if ( y < y2) { y -= 10; }
+        if ( y > y2) { y -= 10; }
         if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
 
     }
@@ -210,7 +215,7 @@ function clear() {
 // This line disallows clicking while the win sound is playing
 disableClick();
 // This line plays the win sounds.
-audio('./media/winGame.mp3');
+audio('./media/winGame2.mp3');
 // This line calls our main animation loop.
 animateLineDrawing();
 // This line waits 1 second. Then, clears canvas, resets game, and allows clikcing again. 
