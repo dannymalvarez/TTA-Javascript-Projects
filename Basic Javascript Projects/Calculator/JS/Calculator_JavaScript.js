@@ -70,14 +70,14 @@ function Handle_Operator(Next_Operator) {
     Calculator.operator = Next_Operator;
 }
 
-const Perform_Calculation = {
-    '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
+const Perform_Calculation = { //this function performs the calculations of the variables
+    '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand, // this divides the first by the second
 
-    '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
+    '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand, // this multiplies the first and second operands
 
-    '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
+    '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand, // this adds the two operands together
 
-    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand, // this subtracts the second operand from the first operand
 
     '=': (First_Operand, Second_Operand) => Second_Operand
 };
