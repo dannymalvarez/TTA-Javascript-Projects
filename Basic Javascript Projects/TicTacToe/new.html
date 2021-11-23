@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>new tic</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="myf1"></p>
+        <p id="demo"></p>
+        <script>
+            myFunction1 = () => {return "I am enjoying coding and am excited to see where this takes me!"}
+            document.getElementById("myf1").innerHTML = myFunction1();
+
+            myFunction2 = () => {return "Hello World!";}
+            document.getElementById("myf2").innerHTML = myFunction2(); 
+
+            const numbers = [45, 4, 9, 16, 25];
+            let someOver18 = numbers.some(myFunction3);
+
+            document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+
+            function myFunction3(value, index, array) {
+                return value > 18;
+            }
+        </script>
+    </body>
+</html>
