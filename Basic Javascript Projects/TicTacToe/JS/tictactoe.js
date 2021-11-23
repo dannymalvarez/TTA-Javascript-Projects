@@ -217,3 +217,16 @@ animateLineDrawing();
 setTimeout(function () { clear(); resetGame(); }, 1000);
 
 }
+
+// This function resets the game in the event of a tie or a win.
+function resetGame() {
+    // This for loop iterates through each HTML square element
+    for (let i = 0; i < 9; i++) {
+        // This variable gets the HTML element of i.
+        let square = document.getElementById(String(i))
+        // This removes our elements backgroundImage.
+        square.style.backgroundImage = ''
+    }
+    // this resets our array so it is empty and we can start over.
+    selectedSquares = [];
+}
