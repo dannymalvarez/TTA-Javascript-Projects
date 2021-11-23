@@ -39,13 +39,13 @@ function placeXOrO(squareNumber) {
         // This condition checks to see if it is computers turn.
         if(activePlayer === 'O') {
             // This function disables clicking for computer choice.
-            function disableClick() {
+            disableClick() 
             // This function waits 1 second before computer places image and enables click.
             setTimeout(function() { computersTurn(); }, 1000)
         }
         // Returning true is needed for our computersTurn() function to work.
         return true;
-        }
+}
 
     //This function results in a random square being selected.
     function computersTurn() {
@@ -67,7 +67,7 @@ function placeXOrO(squareNumber) {
         }
     }
 }
-}
+
 
 
 // This function parses the selectedSquares array to search for win conditions.
@@ -114,6 +114,7 @@ else if (selectedSquares.length >= 9) {
     setTimeout(function () { resetGame(); }, 1000);
 }
 
+
 // This function checks if an array includes 3 strings. It is used to check for 
 // each win condition 
 function arrayIncludes(squareA, squareB, squareC) {
@@ -128,6 +129,7 @@ function arrayIncludes(squareA, squareB, squareC) {
 }
 
 }
+
 
 // This function makes our body element temporarily unclickable.
 function disableClick() {
@@ -235,3 +237,4 @@ function resetGame() {
     // this resets our array so it is empty and we can start over.
     selectedSquares = [];
 }
+
