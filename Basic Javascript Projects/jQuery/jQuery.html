@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" type="text/javascript"></script>
+    </head>
+
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\ 
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <h3>How about this one?</h3>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"}); // this changes the color of the second paragraph tag to red
+            $("#3").click(function() { //declaring a function that activates when the #3 paragraph is clicked
+                $('h1').hide(); // this hides the heading when the third paragraph is clicked
+            });
+        
+
+        // Event setup using a convenience method
+        $( "#1" ).click(function() { // declaring a function to happen when the paragraph with the #1 tag is clicked
+            alert( "You clicked a paragraph!" ); //when the first paragraph is clicked it displays an alert window with the text
+        });
+        $( "p" ).slideUp( 8000 ); // This hides the paragraph by sliding it up over a time of 8 seconds
+    });
+
+    
+    </script>
+</html>
