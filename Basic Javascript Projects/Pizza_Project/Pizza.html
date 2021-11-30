@@ -5,11 +5,18 @@
         <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
         <meta content="width=device-width,initial-scale=1.0" name="viewport">
         <script src="Pizza_JavaScript/Pizza.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="./Pizza_CSS/fade_in.css">
         <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css"/>
+        
     </head>
     <body>
+        <script>document.body.classList.add('fade-out');
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+        });</script>
         <div id="menuBG">
-            <h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
+            <h1 style="margin:0 0px 0 20px; font-size: 6vw;">Pizza Drill Tutorial</h1>
             <input id="btnOrder" type="button" onclick="getReceipt()"
                 value="Place Order">
             <form id="frmMenu">
